@@ -1,0 +1,64 @@
+BERT-type: uncased_L-12_H-768_A-12
+Batch_size = 8
+BERT parameters:
+learning rate: 1e-05
+Fine-tune BERT: True
+vocab size: 30522
+hidden_size: 768
+num_hidden_layer: 12
+num_attention_heads: 12
+hidden_act: gelu
+intermediate_size: 3072
+hidden_dropout_prob: 0.1
+attention_probs_dropout_prob: 0.1
+max_position_embeddings: 512
+type_vocab_size: 2
+initializer_range: 0.02
+Load pre-trained parameters.
+Seq-to-SQL: the number of final BERT layers to be used: 2
+Seq-to-SQL: the size of hidden dimension = 100
+Seq-to-SQL: LSTM encoding layer size = 2
+Seq-to-SQL: dropout rate = 0.3
+Seq-to-SQL: learning rate = 0.001
+/home/ubuntu/anaconda3/envs/pytorch_p36/lib/python3.6/site-packages/torch/nn/functional.py:1351: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+train results ------------
+ Epoch: 0, ave loss: 0.6214553441538668, acc_sc: 0.915, acc_sa: 0.882, acc_wn: 0.961,         acc_wc: 0.907, acc_wo: 0.873, acc_wvi: 0.808, acc_wv: 0.810, acc_lx: 0.632, acc_x: 0.713
+dev results ------------
+ Epoch: 0, ave loss: 1.76122671312055, acc_sc: 0.960, acc_sa: 0.902, acc_wn: 0.986,         acc_wc: 0.959, acc_wo: 0.940, acc_wvi: 0.880, acc_wv: 0.882, acc_lx: 0.747, acc_x: 0.820
+ Best Dev lx acc: 0.747417171357321 at epoch: 0
+train results ------------
+ Epoch: 1, ave loss: 0.28511470985631004, acc_sc: 0.953, acc_sa: 0.904, acc_wn: 0.984,         acc_wc: 0.955, acc_wo: 0.953, acc_wvi: 0.913, acc_wv: 0.914, acc_lx: 0.767, acc_x: 0.833
+dev results ------------
+ Epoch: 1, ave loss: 2.41257624589473, acc_sc: 0.965, acc_sa: 0.899, acc_wn: 0.987,         acc_wc: 0.967, acc_wo: 0.965, acc_wvi: 0.937, acc_wv: 0.938, acc_lx: 0.797, acc_x: 0.857
+ Best Dev lx acc: 0.7971737323358271 at epoch: 1
+train results ------------
+ Epoch: 2, ave loss: 0.19493017306992746, acc_sc: 0.961, acc_sa: 0.906, acc_wn: 0.987,         acc_wc: 0.964, acc_wo: 0.968, acc_wvi: 0.946, acc_wv: 0.946, acc_lx: 0.806, acc_x: 0.867
+dev results ------------
+ Epoch: 2, ave loss: 2.8677490434011363, acc_sc: 0.969, acc_sa: 0.902, acc_wn: 0.988,         acc_wc: 0.969, acc_wo: 0.968, acc_wvi: 0.942, acc_wv: 0.942, acc_lx: 0.809, acc_x: 0.866
+ Best Dev lx acc: 0.8091675572972331 at epoch: 2
+train results ------------
+ Epoch: 3, ave loss: 0.15726459649700592, acc_sc: 0.964, acc_sa: 0.908, acc_wn: 0.989,         acc_wc: 0.969, acc_wo: 0.974, acc_wvi: 0.959, acc_wv: 0.959, acc_lx: 0.824, acc_x: 0.883
+dev results ------------
+ Epoch: 3, ave loss: 3.2795671961176156, acc_sc: 0.967, acc_sa: 0.903, acc_wn: 0.989,         acc_wc: 0.972, acc_wo: 0.974, acc_wvi: 0.954, acc_wv: 0.954, acc_lx: 0.818, acc_x: 0.882
+ Best Dev lx acc: 0.8183113644460278 at epoch: 3
+train results ------------
+ Epoch: 4, ave loss: 0.1387207784481818, acc_sc: 0.967, acc_sa: 0.909, acc_wn: 0.990,         acc_wc: 0.973, acc_wo: 0.977, acc_wvi: 0.965, acc_wv: 0.965, acc_lx: 0.834, acc_x: 0.890
+dev results ------------
+ Epoch: 4, ave loss: 3.593467838714281, acc_sc: 0.969, acc_sa: 0.903, acc_wn: 0.990,         acc_wc: 0.973, acc_wo: 0.975, acc_wvi: 0.961, acc_wv: 0.961, acc_lx: 0.829, acc_x: 0.886
+ Best Dev lx acc: 0.8291176819855124 at epoch: 4
+train results ------------
+ Epoch: 5, ave loss: 0.1269655957010819, acc_sc: 0.968, acc_sa: 0.909, acc_wn: 0.991,         acc_wc: 0.974, acc_wo: 0.979, acc_wvi: 0.969, acc_wv: 0.969, acc_lx: 0.839, acc_x: 0.895
+dev results ------------
+ Epoch: 5, ave loss: 3.2642814001557747, acc_sc: 0.971, acc_sa: 0.908, acc_wn: 0.988,         acc_wc: 0.973, acc_wo: 0.975, acc_wvi: 0.959, acc_wv: 0.958, acc_lx: 0.833, acc_x: 0.888
+ Best Dev lx acc: 0.8329177057356608 at epoch: 5
+train results ------------
+ Epoch: 6, ave loss: 0.11761706705555411, acc_sc: 0.970, acc_sa: 0.910, acc_wn: 0.991,         acc_wc: 0.976, acc_wo: 0.980, acc_wvi: 0.973, acc_wv: 0.973, acc_lx: 0.845, acc_x: 0.900
+dev results ------------
+ Epoch: 6, ave loss: 3.9519629422309808, acc_sc: 0.969, acc_sa: 0.907, acc_wn: 0.991,         acc_wc: 0.975, acc_wo: 0.977, acc_wvi: 0.964, acc_wv: 0.964, acc_lx: 0.835, acc_x: 0.894
+ Best Dev lx acc: 0.8349364683529272 at epoch: 6
+train results ------------
+ Epoch: 7, ave loss: 0.11067465288355013, acc_sc: 0.971, acc_sa: 0.911, acc_wn: 0.993,         acc_wc: 0.978, acc_wo: 0.982, acc_wvi: 0.976, acc_wv: 0.976, acc_lx: 0.851, acc_x: 0.905
+dev results ------------
+ Epoch: 7, ave loss: 3.4378400959402744, acc_sc: 0.971, acc_sa: 0.903, acc_wn: 0.992,         acc_wc: 0.976, acc_wo: 0.978, acc_wvi: 0.964, acc_wv: 0.964, acc_lx: 0.832, acc_x: 0.890
+ Best Dev lx acc: 0.8349364683529272 at epoch: 6
